@@ -3,4 +3,9 @@
     <style name="Floating" parent="Widget.Design.FloatingActionButton">
         <item name="android:foreground">@drawable/floating_background</item>
     </style>
+    
+    <style name="LoginTextInputLayoutStyle" parent="Widget.Material3.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">#FF5722</item>
+        <item name="boxStrokeWidth">2dp</item>
+    </style>
 </resources>

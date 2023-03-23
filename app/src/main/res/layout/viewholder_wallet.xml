@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="82dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="4dp"
+    android:background="@drawable/viewholder_background">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bitcoin" />
+
+    <TextView
+        android:id="@+id/txtCryptoName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Title"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imgLogo"
+        app:layout_constraintTop_toTopOf="@+id/imgLogo" />
+
+    <TextView
+        android:id="@+id/txtCryptonPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="$5000"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgLogo"
+        app:layout_constraintStart_toEndOf="@+id/imgLogo"
+         />
+
+    <TextView
+        android:id="@+id/txtChangePercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="+2.13%"
+        android:textColor="#20CA27"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtCryptonPrice"
+        app:layout_constraintStart_toEndOf="@+id/txtCryptonPrice"
+        app:layout_constraintTop_toBottomOf="@+id/txtCryptoName" />
+
+    <TextView
+        android:id="@+id/txtCryptoSymbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="BTX"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtCryptoName" />
+
+    <TextView
+        android:id="@+id/txtPropertyAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$1234.12"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtCryptoSymbol"
+        app:layout_constraintTop_toBottomOf="@+id/txtCryptoSymbol" />
+
+    <com.majorik.sparklinelibrary.SparkLineLayout
+        android:id="@+id/sparkLineLayout"
+        android:layout_width="90dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtPropertySize"
+        app:layout_constraintStart_toEndOf="@+id/txtChangePercent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:s_line_color="#fed32c"
+        app:s_line_thickness="2dp"
+        app:s_marker_width="8dp"
+        app:s_marker_background_color="#fed32c"/>
+
+    <TextView
+        android:id="@+id/txtPropertySize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:text="0.213"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtCryptoSymbol"
+        app:layout_constraintEnd_toStartOf="@+id/txtCryptoSymbol"
+        app:layout_constraintTop_toTopOf="@+id/txtCryptoSymbol" />
+</androidx.constraintlayout.widget.ConstraintLayout>
